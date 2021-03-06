@@ -25,7 +25,7 @@ namespace AICognitiveServicesApp
 		// AUTHENTICATE. Creates a Computer Vision client
 		private static ComputerVisionClient Authenticate(string endpoint, string key)
 		{
-			ComputerVisionClient client = new ComputerVisionClient(new ApiKeyServiceClientCredentials(key)) 
+			var client = new ComputerVisionClient(new ApiKeyServiceClientCredentials(key)) 
 			{
 				Endpoint = endpoint
 			};

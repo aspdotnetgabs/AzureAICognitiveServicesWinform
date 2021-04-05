@@ -14,7 +14,7 @@ namespace AICognitiveServicesApp
 		// Add your Azure Computer Vision subscription key and endpoint
 		// Get your 7-day trial API key here:  https://azure.microsoft.com/en-us/try/cognitive-services/
 		string subscriptionKey = "PUT YOUR API KEY HERE";
-		string endpoint = "PUT YOUR COMPUTER VISION API ENDPOINT HERE"; // https://westcentralus.api.cognitive.microsoft.com
+		string endpoint = "PUT YOUR COMPUTER VISION API ENDPOINT HERE"; // 
 		string imageFilePath;
 		
 		public MainForm()
@@ -44,6 +44,7 @@ namespace AICognitiveServicesApp
 				imageFilePath = fileDialog.FileName;				
 				pictureBox1.Image = Image.FromFile(imageFilePath);		
 				btnAnalyzeImage.Enabled = true;
+				btnExtractTextFromImage.Enabled = true;
 			}
 		}
 		
@@ -98,6 +99,12 @@ namespace AICognitiveServicesApp
 			}        
 
 			return imageDesc;
+		}
+		
+		async void BtnExtractTextFromImageClick(object sender, EventArgs e)
+		{		
+
+			
 		}
 		
 	}

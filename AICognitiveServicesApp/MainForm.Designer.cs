@@ -22,6 +22,7 @@ namespace AICognitiveServicesApp
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.TextBox txtResultJson;
+		private System.Windows.Forms.Button btnExtractTextFromImage;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -52,6 +53,7 @@ namespace AICognitiveServicesApp
 			this.txtResultDesc = new System.Windows.Forms.TextBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.txtResultJson = new System.Windows.Forms.TextBox();
+			this.btnExtractTextFromImage = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -83,7 +85,7 @@ namespace AICognitiveServicesApp
 			// 
 			this.btnAnalyzeImage.Enabled = false;
 			this.btnAnalyzeImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAnalyzeImage.Location = new System.Drawing.Point(541, 21);
+			this.btnAnalyzeImage.Location = new System.Drawing.Point(359, 21);
 			this.btnAnalyzeImage.Name = "btnAnalyzeImage";
 			this.btnAnalyzeImage.Size = new System.Drawing.Size(172, 43);
 			this.btnAnalyzeImage.TabIndex = 2;
@@ -118,6 +120,7 @@ namespace AICognitiveServicesApp
 			this.txtResultDesc.Location = new System.Drawing.Point(0, 0);
 			this.txtResultDesc.Multiline = true;
 			this.txtResultDesc.Name = "txtResultDesc";
+			this.txtResultDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.txtResultDesc.Size = new System.Drawing.Size(632, 74);
 			this.txtResultDesc.TabIndex = 4;
 			// 
@@ -141,11 +144,24 @@ namespace AICognitiveServicesApp
 			this.txtResultJson.Size = new System.Drawing.Size(632, 74);
 			this.txtResultJson.TabIndex = 5;
 			// 
+			// btnExtractTextFromImage
+			// 
+			this.btnExtractTextFromImage.Enabled = false;
+			this.btnExtractTextFromImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExtractTextFromImage.Location = new System.Drawing.Point(537, 21);
+			this.btnExtractTextFromImage.Name = "btnExtractTextFromImage";
+			this.btnExtractTextFromImage.Size = new System.Drawing.Size(172, 43);
+			this.btnExtractTextFromImage.TabIndex = 4;
+			this.btnExtractTextFromImage.Text = "Extract Text";
+			this.btnExtractTextFromImage.UseVisualStyleBackColor = true;
+			this.btnExtractTextFromImage.Click += new System.EventHandler(this.BtnExtractTextFromImageClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 561);
+			this.Controls.Add(this.btnExtractTextFromImage);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.btnAnalyzeImage);
 			this.Controls.Add(this.btnBrowse);
